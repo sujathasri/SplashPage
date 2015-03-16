@@ -1,0 +1,2 @@
+# SplashPage
+Splash Page resources
