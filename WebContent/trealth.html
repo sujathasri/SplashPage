@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="boilerplate.css" rel="stylesheet" type="text/css">
 <link href="trealth.css" rel="stylesheet" type="text/css">
 <!-- 
@@ -24,20 +25,6 @@ Do the following if you're using your customized build of modernizr (http://www.
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="jquery.js"></script>
-<script>
-$(function() {
-    $('#myform').on('submit', function(e) {
-        var data = $("#myform :email").serialize();
-        $.ajax({
-            type: "POST",
-            url: "https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
-            data: data,
-        });
-        e.preventDefault();
-    });
-});
-</script>
 </head>
 <body>
 <div class="gridContainer clearfix">
@@ -47,18 +34,17 @@ $(function() {
   	<img src="img/Trealth_Logo.svg" alt="trealth logo" width="125" height="65"/>
   </div>
   <div id="LayoutDiv4">
-  A secure and transparent 
+  <p id="helneuethinlightbig">A secure and transparent 
 	<br>
-	trade finance platform
+	trade finance platform</p>
   </div>
   <div id="LayoutDiv5">
-Start your journey to frictionless exports 
+<p id="helneuethinnormal">Start your journey to frictionless exports 
 <br>
-by saving your spot for the upcoming release
-<br>
-<br>
+by saving your spot for the upcoming release </p>
+
 <!--iframe name="hiddenFrame" class="hide"></iframe-->
-<form id="myform">
+<form id="myform" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" style="POST">
 
 <input type=hidden name="oid" value="00Dj00000029Yv7">
 <input type=hidden name="retURL" value="http://www.trealth.com">
@@ -73,26 +59,43 @@ by saving your spot for the upcoming release
  <input  id="email" maxlength="80" name="email" size="20" type="text" value="Email" 
  onfocus="if (this.value == 'Email') {this.value = '';}"/>
 
-<input type="submit" id="submit" name="submit" width="10" value="Request Invite"  style="font-family: 'Helvetica Neue Light'; font-size: 20; border:none; color: #010101; background-color: #ffd500" /> 
+<input type="submit" id="submit" name="submit" width="10" value="Request Invite" onClick="onSubmit()" /> 
 
 </form></div>
   </div>
   
   <div id="LayoutDiv6">
-  <font face="Helvetica Neue Medium" weight="100" color="#242424" size="2"><b>Coming soon</b></font>
-<br>
-<font face="Helvetica Neue Light" weight="100" color="#242424" size="">
+  <p id="helneueboldsmall"><b>Coming soon</b></p>
+<p id="helneuelightmed">
 Trade and financing platform that reduces risk and speeds deals
 <br>
-between the U.S. and hot emerging countries</font>
+between the U.S. and hot emerging countries</p>
 </div>
-
-<div id="LayoutDiv10" style="clear:none;">
-<table>
-<tr>
-<td>
-
+<div id="LayoutDiv10" class="row">
+<div class="col-md-6">
    <div id="LayoutDiv7" >
+	<img src="img/Mission.svg" alt="mission" width="200px" height="50px"> 
+    <p id="helneuethinsmall"> Our Mission </p>
+    <!--font face="Helvetica Neue Medium" color="#787878" size="2">Our Mission</font-->
+
+      <p id="helneuelightsmall" >  Help  exporters expand their international business by making it <br>
+        more efficient,less costly and more fluid  by providing more readily <br>
+        available buyer financing. </p>
+	   </div>
+       </div>
+	<div class="col-md-6">
+     <div id="LayoutDiv9">
+       <img src="img/Values.svg" alt="vision" width="200px" height="50px"> 
+         <p id="helneuethinsmall">Our Values</p> 
+         <p id="helneuelightsmall" > Excellence in international trade knowledge, process, technology, <br>
+          efficiency, cost-effectiveness, speed, flexibility, risk management<br>
+           and communications. </p>
+    </div>
+	 </div>
+     </div>
+
+
+<!--div id="LayoutDiv11" >
 	<img src="img/Mission.svg" alt="mission" width="200px" height="50px"> <br>
     <font face="Helvetica Neue Thin" color="#787878" size="2">Our Mission</font>
 	<br>
@@ -103,19 +106,13 @@ between the U.S. and hot emerging countries</font>
 	   </div>
    </td>
     <td> 
-     <div id="LayoutDiv9">
+     <div id="LayoutDiv12">
        <img src="img/Values.svg" alt="vision" width="200px" height="50px"> <br>
          <font face="Helvetica Neue Thin" color="#787878" size="2">Our Values</font>      <br>
          <font face="Helvetica Neue Light" size="1" color="#787878" > Excellence in international trade knowledge, process, technology, <br>
           efficiency, cost-effectiveness, speed, flexibility, risk management<br>
            and communications. </font>
-	 </div>
-
- </td>
-   </tr>
-   </table> 
-
-</div>
+	 </div-->
   <div id="LayoutDiv8"> </div>
 
   </div>
